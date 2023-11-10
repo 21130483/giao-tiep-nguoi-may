@@ -8,6 +8,19 @@ const provinceInput = document.getElementById("city");
 const cityInput = document.getElementById("district");
 const wardInput = document.getElementById("ward");
 
+const searchInput = document.getElementById("search-object");
+
+const buttonRequirement = document.getElementById(requirement);
+console.log(buttonRequirement)
+const buttonDesign = document.getElementById(design);
+const buttonImplement = document.getElementById(implement);
+
+const requirementview = document.getElementById(requirementView);
+console.log(requirementview)
+const designview = document.getElementById(designView);
+const implementview = document.getElementById(implementView);
+
+
 // let idSchools = [];
 // let nameSchools = [];
 // let educations = [];
@@ -22,175 +35,186 @@ schools.push({ id: "NLU", name: "Nông Lâm Thành phố Hồ Chí Minh", edu: "
 
 function renderSchools() {
     schoolList.innerHTML = "";
+    const searchKeyword = searchInput.value.toLowerCase();
     schools.forEach((school, index) => {
         // for (let i = 0; i < nameSchools.length; i++) {
+        if (school.name.toLowerCase().includes(searchKeyword)) {
 
 
-        //idschool
-        const li = document.createElement("li");
-        li.classList.add("school");
+            //idschool
+            const li = document.createElement("li");
+            li.classList.add("school");
 
-        const idSchool = document.createElement("div");
-        idSchool.classList.add("center")
+            const idSchool = document.createElement("div");
+            idSchool.classList.add("center")
 
-        const pidSchool = document.createElement("p")
-        pidSchool.textContent = school.id;
+            const pidSchool = document.createElement("p")
+            pidSchool.textContent = school.id;
 
-        idSchool.appendChild(pidSchool);
+            idSchool.appendChild(pidSchool);
 
-        //nameschool
+            //nameschool
 
-        const nameSchool = document.createElement("div");
-        nameSchool.classList.add("center")
+            const nameSchool = document.createElement("div");
+            nameSchool.classList.add("center")
 
-        const pnameSchool = document.createElement("p")
-        pnameSchool.textContent = school.name;
+            const pnameSchool = document.createElement("p")
+            pnameSchool.textContent = school.name;
 
-        nameSchool.appendChild(pnameSchool);
+            nameSchool.appendChild(pnameSchool);
 
-        //education
+            //education
 
-        const education = document.createElement("div");
-        education.classList.add("center")
+            const education = document.createElement("div");
+            education.classList.add("center")
 
-        const peducation = document.createElement("p")
-        peducation.textContent = school.edu;
+            const peducation = document.createElement("p")
+            peducation.textContent = school.edu;
 
-        education.appendChild(peducation);
+            education.appendChild(peducation);
 
-        //phone number
-        const phoneNumber = document.createElement("div");
-        phoneNumber.classList.add("center")
+            //phone number
+            const phoneNumber = document.createElement("div");
+            phoneNumber.classList.add("center")
 
-        const pphoneNumber = document.createElement("p")
-        pphoneNumber.textContent = school.phonenumber;
+            const pphoneNumber = document.createElement("p")
+            pphoneNumber.textContent = school.phonenumber;
 
-        phoneNumber.appendChild(pphoneNumber);
+            phoneNumber.appendChild(pphoneNumber);
 
-        //establish
-        const establish = document.createElement("div");
-        establish.classList.add("center")
+            //establish
+            const establish = document.createElement("div");
+            establish.classList.add("center")
 
-        const pestablish = document.createElement("p")
-        pestablish.textContent = school.esta;
-
-        establish.appendChild(pestablish);
-
-        //address
-        // const address = document.createElement("div");
-        // address.classList.add("center")
-
-        // const paddress = document.createElement("p")
-        // paddress.textContent = school.address;
-
-        // address.appendChild(paddress);
-
-        //province
-        // const pprovince = document.createElement("p")
-        // pprovince.textContent = school.province;
-        // console.log(pprovince);
-        //city
-
-        // const pcity = document.createElement("p")
-        // pcity.textContent = school.city;
-
-
-        //ward
-        // const pward = document.createElement("p")
-        // pward.textContent = school.ward;
-
-        //address
-        // console.log(pprovince);
-        // console.log(pcity);
-        // console.log(pward);
-        // console.log(school.province+", "+school.city+", "+school.ward);
-
-        const address = document.createElement("div");
-        address.classList.add("center")
-
-        const paddresss = document.createElement("p")
-        paddresss.textContent = school.province + ", " + school.city + ", " + school.ward;
-
-        address.appendChild(paddresss);
-
-        //edit and delete
-        const editDelete = document.createElement("div");
-        editDelete.classList.add("edit-delete");
-
-        const editButton = document.createElement("button");
-        editButton.classList.add("edit");
-        editButton.textContent = "Sửa";
-        editButton.addEventListener("click", () => editSchool(index));
-
-        const deleteButton = document.createElement("button");
-        deleteButton.classList.add("delete");
-        deleteButton.textContent = "Xóa";
-        deleteButton.addEventListener("click", () => deleteSchool(index));
-
-        editDelete.appendChild(editButton);
-        editDelete.appendChild(deleteButton);
-
-        //appendchild to li
-
-        li.appendChild(idSchool);
-        li.appendChild(nameSchool);
-        li.appendChild(education);
-        li.appendChild(phoneNumber);
-        li.appendChild(establish);
-        li.appendChild(address);
-        li.appendChild(editDelete);
+            const pestablish = document.createElement("p")
+            // pestablish.textContent = school.esta;
 
 
 
+            const customDate = school.esta;
+            const parts = customDate.split('-');
+            const dateEsta = parts[2] + "/" + parts[1] + "/" + parts[0];
 
-        // const pname = document.createElement("p")
-
-        // pname.textContent = school;
-
-        // nameSchool.appendChild(pname);
-
-        // nameSchool.textContent = school;
+            pestablish.textContent = dateEsta;
 
 
-        // const education = document.createElement("div");
-        // education.textContent = educations[index];
+            establish.appendChild(pestablish);
+            //address
+            // const address = document.createElement("div");
+            // address.classList.add("center")
 
-        // const phoneNumber = document.createElement("div");
-        // phoneNumber.textContent = phoneNumbers[index];
+            // const paddress = document.createElement("p")
+            // paddress.textContent = school.address;
 
-        // const establish = document.createElement("div");
-        // establish.textContent = establishs[index];
+            // address.appendChild(paddress);
 
-        // const address = document.createElement("div");
-        // address.textContent = `${provinces[index]},${citys[index]},${wards[index]}`;
+            //province
+            // const pprovince = document.createElement("p")
+            // pprovince.textContent = school.province;
+            // console.log(pprovince);
+            //city
 
-        // const editDelete = document.createElement("div");
-        // editDelete.textContent = establishs[index];
-
-        // const editButton = document.createElement("button");
-        // editButton.textContent = "Sửa";
-        // editButton.addEventListener("click", () => editObject(index));
-
-        // const deleteButton = document.createElement("button");
-        // deleteButton.textContent = "Xóa";
-        // deleteButton.addEventListener("click", () => deleteObject(index));
-
-        // editDelete.appendChild(editButton);
-        // editDelete.appendChild(deleteButton);
-
-        // li.appendChild(idSchool);
-        // li.appendChild(nameSchool);
-        // li.appendChild(education);
-        // li.appendChild(phoneNumber);
-        // li.appendChild(establish);
-        // li.appendChild(address);
-        // li.appendChild(editDelete);
-
-        // li.addEventListener("click", () => selectObject(index));
+            // const pcity = document.createElement("p")
+            // pcity.textContent = school.city;
 
 
+            //ward
+            // const pward = document.createElement("p")
+            // pward.textContent = school.ward;
 
-        schoolList.appendChild(li)
+            //address
+            // console.log(pprovince);
+            // console.log(pcity);
+            // console.log(pward);
+            // console.log(school.province+", "+school.city+", "+school.ward);
+
+            const address = document.createElement("div");
+            address.classList.add("center")
+
+            const paddresss = document.createElement("p")
+            paddresss.textContent = school.province + ", " + school.city + ", " + school.ward;
+
+            address.appendChild(paddresss);
+
+            //edit and delete
+            const editDelete = document.createElement("div");
+            editDelete.classList.add("edit-delete");
+
+            const editButton = document.createElement("button");
+            editButton.classList.add("edit");
+            editButton.textContent = "Sửa";
+            editButton.addEventListener("click", () => editSchool(index));
+
+            const deleteButton = document.createElement("button");
+            deleteButton.classList.add("delete");
+            deleteButton.textContent = "Xóa";
+            deleteButton.addEventListener("click", () => deleteSchool(index));
+
+            editDelete.appendChild(editButton);
+            editDelete.appendChild(deleteButton);
+
+            //appendchild to li
+
+            li.appendChild(idSchool);
+            li.appendChild(nameSchool);
+            li.appendChild(education);
+            li.appendChild(phoneNumber);
+            li.appendChild(establish);
+            li.appendChild(address);
+            li.appendChild(editDelete);
+
+
+
+
+            // const pname = document.createElement("p")
+
+            // pname.textContent = school;
+
+            // nameSchool.appendChild(pname);
+
+            // nameSchool.textContent = school;
+
+
+            // const education = document.createElement("div");
+            // education.textContent = educations[index];
+
+            // const phoneNumber = document.createElement("div");
+            // phoneNumber.textContent = phoneNumbers[index];
+
+            // const establish = document.createElement("div");
+            // establish.textContent = establishs[index];
+
+            // const address = document.createElement("div");
+            // address.textContent = `${provinces[index]},${citys[index]},${wards[index]}`;
+
+            // const editDelete = document.createElement("div");
+            // editDelete.textContent = establishs[index];
+
+            // const editButton = document.createElement("button");
+            // editButton.textContent = "Sửa";
+            // editButton.addEventListener("click", () => editObject(index));
+
+            // const deleteButton = document.createElement("button");
+            // deleteButton.textContent = "Xóa";
+            // deleteButton.addEventListener("click", () => deleteObject(index));
+
+            // editDelete.appendChild(editButton);
+            // editDelete.appendChild(deleteButton);
+
+            // li.appendChild(idSchool);
+            // li.appendChild(nameSchool);
+            // li.appendChild(education);
+            // li.appendChild(phoneNumber);
+            // li.appendChild(establish);
+            // li.appendChild(address);
+            // li.appendChild(editDelete);
+
+            // li.addEventListener("click", () => selectObject(index));
+
+
+
+            schoolList.appendChild(li)
+        }
     });
     // }
 
@@ -341,7 +365,7 @@ function editFinish(index) {
     const themButton = document.getElementById("them");
     const suaButton = document.getElementById("sua");
 
-    themButton.style.display = "block"
+    themButton.style.display = "block";
     suaButton.style.display = "none";
 
 
@@ -363,5 +387,45 @@ function deleteSchool(index) {
     // }
 }
 
+searchInput.addEventListener("input", filterObjects);
+
+function filterObjects() {
+    renderSchools();
+}
+
 renderSchools();
+
+function displayViewRequirement() {
+    document.getElementById(requirement).classList.add(buttonchoosen);
+    document.getElementById(design).classList.remove(buttonchoosen);
+    document.getElementById(implement).classList.remove(buttonchoosen);
+
+    document.getElementById(requirement - view).style.display = "block";
+    document.getElementById(design - view).style.display = "none";;
+    document.getElementById(implement - view).style.display = "none";
+}
+
+function displayViewDesign() {
+    const setrequirement = document.getElementById(requirement);
+    console.log(setrequirement);
+    setrequirement.classList.remove(buttonchoosen);
+    document.getElementById(design).classList.add(buttonchoosen);
+    document.getElementById(implement).classList.remove(buttonchoosen);
+
+    document.getElementById(requirement - view).style.display = "none";
+    document.getElementById(design - view).style.display = "block";
+    document.getElementById(implement - view).style.display = "none";
+
+}
+
+function displayViewImplement() {
+    document.getElementById(requirement).classList.remove(buttonchoosen);
+    document.getElementById(design).classList.remove(buttonchoosen);
+    document.getElementById(implement).classList.add(buttonchoosen);
+
+    document.getElementById(requirement - view).style.display = "none";
+    document.getElementById(design - view).style.display = "none";;
+    document.getElementById(implement - view).style.display = "block";
+
+}
 

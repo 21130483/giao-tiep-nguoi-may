@@ -11,6 +11,11 @@
     margin: 0 20px;
 }
 
+.three-buttons .buttonchoosen{
+    background-color: orange;
+    color: white;
+}
+
 .lab-4 .requirement-view {
     display: block;
     margin: 20px 0;
@@ -131,6 +136,17 @@
     border: none;
     background-color: rgb(0, 252, 0);
     color: white;;
+}
+
+.dien-thong-tin .input-tim-kiem{
+    display: flex;
+}
+
+.input-tim-kiem input{
+    height: 50px;
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: center;
 }
 
 .list-school{

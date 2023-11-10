@@ -98,6 +98,20 @@
           <p>– Cách hợp lý nhất để sống trong thế giới này là phá bỏ đi những nguyên tắc. – Joker</p>
           <p>– Chúng mày có dừng ngay cái việc đang đi tìm một con quỷ trong khi chúng mày nhận ra nó đang
             bên trong chính chúng mày. – Joker</p>
+          <!-- <video src="assets/img/lab 4/worlds 2023.mp4" ></video> -->
+          <!-- <video id="myVideo" controls
+            style="max-width: 100%;max-height: 100%;width: auto;height: auto;border-radius: 8px;">
+            <source src="assets/img/lab 4/worlds 2023.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <script>
+            // Lấy ra phần tử video
+            var myVideo = document.getElementById("myVideo");
+
+            // Optional: Bắt đầu chạy video tự động khi trang được tải
+            myVideo.play();
+          </script> -->
           <p></p>
           <p></p>
         </div>
@@ -486,12 +500,12 @@
         </div>
 
         <div class="three-buttons">
-          <button class="requirement">Requirement</button>
-          <button class="design">Design</button>
-          <button class="implement">Implement</button>
+          <button class="requirement" id="requirement" onclick="displayViewRequirement()">Requirement</button>
+          <button class="design" id="design" onclick="displayViewDesign()">Design</button>
+          <button class="implement" id="implement" onclick="displayViewImplement()">Implement</button>
         </div>
 
-        <div class="requirement-view">
+        <div class="requirement-view" id="requirementView">
           <span style="font-weight: bolder; font-size: 30px;">Yêu cầu:</span>
           <p>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như lớp môn học, giảng viên,… Sau đó thiết kế
             chức năng Quản lý đối tượng đó trên html bao gồm các tính năng thêm, sửa, xóa, tìm kiếm cho đối tượng đó. Ví
@@ -499,27 +513,35 @@
             lớp, trong nhóm không được chọn các đối tượng giống nhau. </p>
         </div>
 
-        <div class="design-view">
+        <div class="design-view" id="designView">
           <div class="mau-giay">
             <div class="img-giay">
-              <img src="assets/img/lab 4/thiết kế trên giấy.jpg" alt="">
+              <img src="assets/img/lab 4/giấy.jpg" alt="">
             </div>
 
-            <button>Download</button>
+            <a href="assets/img/lab 4/giấy.jpg" download="thiết kế trên giấy.jpg">
+              <button>Download Image</button>
+            </a>
           </div>
 
           <div class="mau-figma">
             <div class="img-figma">
-              <img src="assets/img/lab 4/thiết kế trên figma.jpg" alt="">
+              <img src="assets/img/lab 4/figma.jpg" alt="">
             </div>
 
-            <button>Download</button>
+            <a href="assets/img/lab 4/figma.jpg" download="thiết kế trên figma.jpg">
+              <button>Download Image</button>
+            </a>
 
-            <button>Go to Figma</button>
+            <a
+              href="https://www.figma.com/file/yZcGnTJrm6V7cW5GilULNq/Untitled?type=design&node-id=0%3A1&mode=design&t=66LoSKVNCKD9ze0L-1">
+              <button>Go to Figma</button>
+            </a>
+
           </div>
         </div>
 
-        <div class="implement-view">
+        <div class="implement-view" id="implementView">
           <div class="title">
             <p>Quản lý trường học</p>
           </div>
@@ -531,7 +553,7 @@
               <input type="text" id="school-name" placeholder="Tên trường">
 
               <Select id="education">
-                <option value="">Giáo dục</option>
+                <option value selected>Giáo dục</option>
                 <option value="Mầm non">Mầm non</option>
                 <option value="Tiểu học">Tiểu học</option>
                 <option value="Trung học cơ sở">Trung học cơ sở</option>
@@ -546,10 +568,11 @@
             <div class="right">
               <div class="thanh-lap">
                 Thành lập
-                <input id="establish" type="date" >
+                <input id="establish" type="date">
               </div>
 
               <div class="address">
+                Địa chỉ
                 <!-- Địa chỉ
                 <input id="ward" type="text" placeholder="Phường">
 
@@ -716,6 +739,10 @@
 
           </div>
 
+          <div class="input-tim-kiem">
+            <input type="text" id="search-object" placeholder="Tìm kiếm tên trường">
+          </div>
+
           <div class="list-school">
             <div class="tieu-de">
               <div class="center">
@@ -732,17 +759,17 @@
 
               <div class="center">
                 <p>Số điện thoại</p>
-                
+
               </div>
 
               <div class="center">
                 <p>Thành lập</p>
-                
+
               </div>
 
               <div class="center">
                 <p>Địa chỉ</p>
-                
+
               </div>
 
               <div class="center">
