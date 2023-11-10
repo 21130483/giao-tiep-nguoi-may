@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.object-list {
+    margin: 20px;
+}
+
+.object-actions {
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Tạo 2 cột trong mỗi thẻ <li> */
+    grid-gap: 10px; /* Khoảng cách giữa các phần tử trong mỗi thẻ */
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+li:hover {
+    background-color: #eee;
+}
+
+button {
+    width: 50px;
+}
