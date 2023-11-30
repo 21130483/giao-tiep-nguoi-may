@@ -23,15 +23,18 @@
     /* display: none; */
 
 }
-
 .lab-4 .design-view {
+    display: none;
+}
+
+
+.lab-4 .design-view .grid{
     margin: 40px 0 20px;
     background-color: dimgray;
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    /* display: none; */
 }
 
 .lab-4 .design-view .img-giay {
@@ -59,7 +62,7 @@
     flex-direction: column;
     border: 1px solid black;
 
-    /* display: none; */
+    display: none;
 }
 
 .lab-4 .implement-view .title {

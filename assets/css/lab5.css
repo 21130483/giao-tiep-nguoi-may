@@ -1,0 +1,96 @@
+* {
+    padding: 0px;
+    margin: 0;
+    font-size: 12px;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.background {
+    width: auto;
+    height: 600px;
+    background-color: #b3d4fc;
+    padding: 100px;
+}
+
+.table {
+    width: 280px;
+    height: auto;
+    margin: auto;
+    background-color: #F3F3F3;
+    padding: 55px 55px 30px;
+    border-radius: 20px;
+}
+
+.sign-in {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.sign-in span {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #bd59d4;
+}
+
+.username {
+    margin-bottom: 30px;
+}
+
+.password {
+    margin-bottom: 30px;
+
+}
+
+.input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+
+input.input {
+    font-size: 25px;
+}
+
+input.input::placeholder {
+    color: #44174E;
+}
+
+
+.button-sign-in {
+    text-align: center;
+}
+
+.button-sign-in button {
+    background-color: #bd59d4;
+    border: none;
+    width: 160px;
+    height: 50px;
+    padding: 0px 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+
+}
+
+.button-sign-in button:active  {
+    background-color: #b3d4fc;
+
+}
+
+
+
+.text {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.text a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}

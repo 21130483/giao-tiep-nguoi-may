@@ -10,15 +10,6 @@ const wardInput = document.getElementById("ward");
 
 const searchInput = document.getElementById("search-object");
 
-const buttonRequirement = document.getElementById(requirement);
-console.log(buttonRequirement)
-const buttonDesign = document.getElementById(design);
-const buttonImplement = document.getElementById(implement);
-
-const requirementview = document.getElementById(requirementView);
-console.log(requirementview)
-const designview = document.getElementById(designView);
-const implementview = document.getElementById(implementView);
 
 
 // let idSchools = [];
@@ -393,39 +384,42 @@ function filterObjects() {
     renderSchools();
 }
 
+
+
+
+
+
+
+
+// ******đóng mở box*******
+function viewBoxLab4(boxId,buttonId) {
+    var box = document.getElementById(boxId);
+    var btton = document.getElementById(buttonId);
+
+    // Đóng tất cả các box khác trước khi mở box mới
+    var allBoxes = document.getElementsByClassName('view_lab4');
+    for (var i = 0; i < allBoxes.length; i++) {
+        if (allBoxes[i].id !== boxId) {
+            allBoxes[i].style.display = 'none';
+        }
+    }
+
+    var allButtons = document.getElementsByClassName('buttonViewLab4');
+    for (var i = 0; i < allButtons.length; i++) {
+        if (allButtons[i].id !== buttonId) {
+            allButtons[i].classList.remove('buttonchoosen');
+        }
+    }
+
+
+
+    box.style.display = 'block';
+    btton.classList.add('buttonchoosen');
+}
+
+
 renderSchools();
 
-function displayViewRequirement() {
-    document.getElementById(requirement).classList.add(buttonchoosen);
-    document.getElementById(design).classList.remove(buttonchoosen);
-    document.getElementById(implement).classList.remove(buttonchoosen);
 
-    document.getElementById(requirement - view).style.display = "block";
-    document.getElementById(design - view).style.display = "none";;
-    document.getElementById(implement - view).style.display = "none";
-}
 
-function displayViewDesign() {
-    const setrequirement = document.getElementById(requirement);
-    console.log(setrequirement);
-    setrequirement.classList.remove(buttonchoosen);
-    document.getElementById(design).classList.add(buttonchoosen);
-    document.getElementById(implement).classList.remove(buttonchoosen);
-
-    document.getElementById(requirement - view).style.display = "none";
-    document.getElementById(design - view).style.display = "block";
-    document.getElementById(implement - view).style.display = "none";
-
-}
-
-function displayViewImplement() {
-    document.getElementById(requirement).classList.remove(buttonchoosen);
-    document.getElementById(design).classList.remove(buttonchoosen);
-    document.getElementById(implement).classList.add(buttonchoosen);
-
-    document.getElementById(requirement - view).style.display = "none";
-    document.getElementById(design - view).style.display = "none";;
-    document.getElementById(implement - view).style.display = "block";
-
-}
 

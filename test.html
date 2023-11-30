@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="assets/css/test.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/test.css">
+  <title>Toggle Boxes</title>
 </head>
 <body>
-    <h1>Quản lý đối tượng</h1>
-    <div class="object-actions">
-        <input type="text" id="search-object" placeholder="Tìm kiếm đối tượng">
-        <input type="text" id="object-name" placeholder="Tên đối tượng">
-        <input type="text" id="object-description" placeholder="Mô tả đối tượng">
-        <button onclick="addObject()">Thêm</button>
-    </div>
-    <div class="object-list">
-        <ul id="object-ul"></ul>
-    </div>
-    <input type="hidden" id="selected-object-index">
-    <script src="assets/js/test.js"></script>
+
+  <button id="btnBox1" onclick="toggleBox('box1')">Mở Box 1</button>
+  <div id="box1" class="box">
+    <p>Nội dung Box 1</p>
+  </div>
+
+  <button id="btnBox2" onclick="toggleBox('box2')">Mở Box 2</button>
+  <div id="box2" class="box">
+    <p>Nội dung Box 2</p>
+  </div>
+
+  <script src="assets/js/test.js"></script>
 </body>
 </html>
-
-
