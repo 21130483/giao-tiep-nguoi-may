@@ -1,0 +1,312 @@
+html{
+    font-family: Arial, Tahoma, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+.container{
+    width: 1180px;
+    margin: 0px auto;
+}
+/*bang dau*/
+#section_text_2 {
+    height: 120px;
+    background-color: #F3F3F3;
+}
+
+#section_text_2 .alpha{
+    float: left;
+    margin-top: 35px;
+}
+
+#section_text_2 .omega{
+    float: right;
+    width: 150px;
+    height: 50px;
+    background-color: #F77825;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    /*color: white;*/
+}
+
+#section_text_2 .omega a{
+    color: white;
+    text-decoration: none;
+}
+
+/*bang menu*/
+#section_header_1 {
+    height: 100px;
+    display: block;
+}
+
+#section_header_1 .bottom-icons{
+    float: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style-type: none;
+    display: flex;
+    margin-top: 35px;
+}
+
+.bottom-icons ul{
+    text-decoration: none;
+
+}
+.bottom-icons a{
+    padding: 0px 15px;
+    color: #7F7F7F;
+    font-size: 20px;
+}
+
+.navbar-left{
+    float: left;
+    display: flex;
+    margin-top: 35px;
+
+
+}
+
+.navbar-collapse ul{
+    list-style-type: none;
+}
+
+.navbar-collapse a{
+    padding: 0px 25px;
+    text-decoration: none;
+    color: #7F7F7F;
+    font-weight: bolder;
+}
+/*bang 3*/
+#section_slider {
+    height: 660px;
+    background-color: #EEEEEE;
+    padding-top: 70px;
+}
+
+.text-in-img{
+    position: absolute;
+    top: 660px;
+    left: 300px;
+    font-size: 20px;
+    color: white;
+}
+/*bang 4*/
+#section_gym_4{
+    height: 590px;
+}
+
+#section_gym_4 .top_padding{
+    padding-top: 100px;
+    display: flex;
+}
+
+#section_gym_4 .part_st{
+    text-align: center;
+}
+
+#section_gym_4 .gym_st{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#section_gym_4 .gym_text{
+    margin-left: 60px;
+    margin-right: 60px;
+    color: #BCA9A9 ;
+    margin-bottom: 40px;
+}
+
+#section_gym_4 .link_3_btn{
+
+    padding: 15px 25px;
+    background-color: #FF8833;
+    border-radius: 5px;
+}
+
+.one-third img{
+    border-radius: 200px;
+}
+
+#section_gym_4 .link_3_btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.one-third img{
+    border-radius: 200px;
+}
+
+/*bang gia mua*/
+#section_intro_title{
+    height: 600px;
+    background-color: #EEEEEE;
+
+}
+
+#section_intro_title .container{
+    display: flex;
+}
+
+#section_intro_title .one-third{
+    width: 370px;
+    height: 500px;
+    text-align: center;
+    background-color: white;
+    margin: 20px 30px;
+    border: 3px solid #DDDDDD;
+    border-radius: 5px;
+}
+
+.light_gray {
+    color: #999999;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#section_intro_title li {
+    list-style-type: none;
+    padding-bottom: 20px;
+    font-weight: normal;
+
+}
+
+.flat_pricing_list{
+    padding: 0px;
+}
+
+
+.big_title{
+    font-size: 60px;
+}
+
+.blue_text{
+    color: #2DC0E8;
+}
+
+.orange{
+    color: #F77825;
+}
+
+.active_bg_open{
+    
+    padding: 20px 35px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+.blue_bg{
+    background-color: #2DC0E8;
+}
+
+.orange_bg{
+    background-color: #F77825;
+}
+
+    /*bang get your ticket*/
+#section_party_3{
+    height: 735px;
+    background-color: #191919;
+    margin-top: 0px;
+
+}
+
+#section_party_3 .container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_input{
+    width: 560px;
+    height: 550px;
+    margin-top: 90px;
+    background-color: #151515;
+    /*background-color: white;*/
+}
+
+.headtext_style{
+    padding-top: 50px;
+    color: white;
+    font-size: 27px;
+}
+
+.subtext_style{
+    color: #808080;
+    font-size: 20px;
+    padding: 40px 90px 30px;
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+
+#contact_form .pix_text{
+    width: 500px;
+    height: 60px;
+    margin: 0px 0px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.subscribe_btn{
+    background-color: #2C85ED;
+    color: white;
+}
+
+    /*bang cuoi*/
+#section_party_4{
+    height: 80px;
+    background-color: #151515;
+    display: block;
+}
+
+.rights_st{
+    padding-top:40px;
+    float: left;
+    color: #A9A4A4;
+}
+
+.pixfort_st{
+    color: #1C8FF5;
+    font-weight: bolder;
+}
+
+.socbuttons{
+    padding: 20px;
+    float: right;
+    display: flex;
+    color: #A9A4A4;
+}
+
+.socbuttons .bottom-icons{
+    list-style-type: none;
+    display: flex;
+
+}
+
+.socbuttons .bottom-icons a{
+    color: #A9A4A4;
+
+}
+
+.likes_st{
+    padding-top: 20px;
+}
+
+
+
+
+

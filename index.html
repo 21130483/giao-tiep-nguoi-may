@@ -30,6 +30,8 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/lab 4.css">
   <link rel="stylesheet" href="assets/css/lab 5.css">
+  <link rel="stylesheet" href="assets/css/lab6.css">
+
 
 
 
@@ -68,11 +70,11 @@
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-              <span>Portfolio</span></a></li>
+          <!-- <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i><span>Portfolio</span></a></li> -->
           <!-- <li><a href="#Lab4" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Lab 4</span></a></li> -->
           <li><a href="#Lab4" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Lab 4</span></a></li>
           <li><a href="#Lab5" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Lab 5</span></a></li>
+          <li><a href="#Lab6" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Lab 6</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -809,7 +811,7 @@
         </div>
 
         <div class="three-buttons">
-          <button class="requirement buttonViewLab5" id="requirementLab5"
+          <button class="requirement buttonViewLab5 buttonchoosen" id="requirementLab5"
             onclick="viewBoxLab5('requirementViewLab5','requirementLab5')">Requirement</button>
           <button class="design buttonViewLab5" id="designLab5"
             onclick="viewBoxLab5('designViewLab5','designLab5')">Design</button>
@@ -828,7 +830,7 @@
             ở (2).</p>
         </div>
 
-        <div class="design-view view_lab5" id="designViewLab5" style="display: block;">
+        <div class="design-view view_lab5" id="designViewLab5" style="display: none;">
           <div class="userscenario">
             <span style="font-weight: bolder; font-size: 30px;">User Scenario:</span>
           </div>
@@ -871,7 +873,7 @@
 
         </div>
 
-        <div class="implement-view view_lab5" id="implementViewLab5">
+        <div class="implement-view view_lab5" id="implementViewLab5" style="display: none;">
           <p style="font-size: 30px;font-weight: bolder;">Trang web:</p>
           <div style="display: flex;justify-content: center;align-items: center;margin: 30px 0;">
             <div class="img" style="height: 100%; width: 100%;">
@@ -880,7 +882,8 @@
             </div>
           </div>
           <div style="display: flex;justify-content: center;">
-            <a href="lab5.html" target="_blank"><button style="width: 100px;height: 50px;font-size: 20px;background-color: #00ff00;font-weight: bolder;">Demo</button></a>
+            <a href="lab5.html" target="_blank"><button
+                style="width: 100px;height: 50px;font-size: 20px;background-color: #00ff00;font-weight: bolder;">Demo</button></a>
           </div>
         </div>
 
@@ -888,95 +891,166 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <section id="Lab6" class="testimonials section-bg lab-4">
       <div class="container">
 
         <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+          <h2>Lab6</h2>
         </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+        <div class="two-buttons">
+          <button class="two-button-exes ex-choosen" id="ex1" onclick="viewBoxExLab6('fpattern','ex1')">Ex1</button>
+          <button class="two-button-exes" id="ex2" onclick="viewBoxExLab6('zpattern','ex2')">Ex2</button>
+        </div>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
-                  quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div><!-- End testimonial item -->
+        <div id="fpattern" class="two-exes">
+          <div class="three-buttons" style="display: flex;justify-content: center; padding-top: 20px;">
+            <button class="requirement buttonViewLab6 buttonchoosen" id="requirementLab6"
+              onclick="viewBoxLab6('requirementViewLab6','requirementLab6')">Requirement</button>
+            <button class="design buttonViewLab6" id="designLab6"
+              onclick="viewBoxLab6('designViewLab6','designLab6')">Design</button>
+            <button class="implement buttonViewLab6" id="implementLab6"
+              onclick="viewBoxLab6('implementViewLab6','implementLab6')">Implement</button>
+          </div>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                  quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
-                  tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
-                  minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
-                  labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
+          <div class="requirement-view view_lab6" id="requirementViewLab6">
+            <span style="font-weight: bolder; font-size: 30px;">Yêu cầu:</span>
+            <p>Ex1: Thiết kế một trang Web đơn giản sử dụng mẫu F-pattern ==> chuyển sang html (ex1.html)</p>
 
           </div>
-          <div class="swiper-pagination"></div>
+
+          <div class="design-view view_lab6" id="designViewLab6" style="display: none;">
+            <span style="font-weight: bolder; font-size: 30px;">Thiết kế:</span>
+            <div class="grid">
+              <div class="mau-giay">
+                <div class="img-giay">
+                  <img src="assets/img/lab6/f-pattern.jpg" alt="">
+                </div>
+
+                <a href="assets/img/lab6/f-pattern.jpg" download="thiết kế trên giấy.jpg">
+                  <button>Download Image</button>
+                </a>
+              </div>
+
+              <div class="mau-figma">
+                <div class="img-figma">
+                  <img src="assets/img/lab6/figma-f-pattern.png" alt="">
+                </div>
+
+                <a href="assets/img/lab6/figma-f-pattern.png" download="thiết kế trên figma.jpg">
+                  <button>Download Image</button>
+                </a>
+
+                <a
+                  href="https://www.figma.com/file/yZcGnTJrm6V7cW5GilULNq/Untitled?type=design&node-id=87%3A2&mode=design&t=fjcqoaKNHMRAdd8d-1">
+                  <button>Go to Figma</button>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="implement-view view_lab6" id="implementViewLab6" style="display: none;">
+            <p style="font-size: 30px;font-weight: bolder;">Trang web:</p>
+            <div style="display: flex;justify-content: center;align-items: center;margin: 30px 0;">
+              <div class="img" style="height: 100%; width: 100%;">
+                <img src="assets/img/lab6/web-f-pattern.png" alt=""
+                  style="max-width: 100%;max-height: 100%;width: auto;height: auto;">
+              </div>
+            </div>
+            <div style="display: flex;justify-content: center;">
+              <a href="f-pattern.html" target="_blank"><button
+                  style="width: 100px;height: 50px;font-size: 20px;background-color: #00ff00;font-weight: bolder;">Demo</button></a>
+            </div>
+          </div>
         </div>
 
+
+
+
+
+
+
+        <div id="zpattern" class="two-exes" style="display: none;">
+          <div class="three-buttons" style="display: flex;justify-content: center; padding-top: 20px;">
+            <button class="requirement buttonViewLabz6 buttonchoosen" id="requirementLabz6"
+              onclick="viewBoxLabz6('requirementViewLabz6','requirementLabz6')">Requirement</button>
+            <button class="design buttonViewLabz6" id="designLabz6"
+              onclick="viewBoxLabz6('designViewLabz6','designLabz6')">Design</button>
+            <button class="implement buttonViewLabz6" id="implementLabz6"
+              onclick="viewBoxLabz6('implementViewLabz6','implementLabz6')">Implement</button>
+          </div>
+
+          <div class="requirement-view view_labz6" id="requirementViewLabz6">
+            <span style="font-weight: bolder; font-size: 30px;">Yêu cầu:</span>
+            <p>Ex2: Thiết kế một trang Web sử dụng mẫu Z-pattern ==> chuyển sang html (ex2.html)</p>
+
+          </div>
+
+          <div class="design-view view_labz6" id="designViewLabz6" style="display: none;">
+            <span style="font-weight: bolder; font-size: 30px;">Thiết kế:</span>
+            <div class="grid">
+              <div class="mau-giay">
+                <div class="img-giay">
+                  <img src="assets/img/lab6/z-pattern.jpg" alt="">
+                </div>
+
+                <a href="assets/img/lab6/z-pattern.jpg" download="thiết kế trên giấy.jpg">
+                  <button>Download Image</button>
+                </a>
+              </div>
+
+              <div class="mau-figma">
+                <div class="img-figma">
+                  <img src="assets/img/lab6/figma-z-pattern.png" alt="">
+                </div>
+
+                <a href="assets/img/lab6/figma-z-pattern.png" download="thiết kế trên figma.jpg">
+                  <button>Download Image</button>
+                </a>
+
+                <a
+                  href="https://www.figma.com/file/yZcGnTJrm6V7cW5GilULNq/Untitled?type=design&node-id=87%3A18&mode=design&t=lvSC2oQF7NcFoQTw-1">
+                  <button>Go to Figma</button>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="implement-view view_labz6" id="implementViewLabz6" style="display: none;">
+            <p style="font-size: 30px;font-weight: bolder;">Trang web:</p>
+            <div style="display: flex;justify-content: center;align-items: center;margin: 30px 0;">
+              <div class="img" style="height: 100%; width: 100%;">
+                <img src="assets/img/lab6/web-z-pattern.png" alt=""
+                  style="max-width: 100%;max-height: 100%;width: auto;height: auto;">
+              </div>
+            </div>
+            <div style="display: flex;justify-content: center;">
+              <a href="z-pattern.html" target="_blank"><button
+                  style="width: 100px;height: 50px;font-size: 20px;background-color: #00ff00;font-weight: bolder;">Demo</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+
+        </div>
+
+
+
+
+
+
       </div>
-    </section>End Testimonials Section
+      <!-- <div class="swiper-pagination"></div> -->
+      </div>
+
+
+
+    </section>
+
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -1089,6 +1163,8 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/lab 4.js"></script>
   <script src="assets/js/lab5.js"></script>
+  <script src="assets/js/lab6.js"></script>
+
 
 
 </body>

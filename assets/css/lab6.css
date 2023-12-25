@@ -1,0 +1,18 @@
+.two-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.two-buttons button {
+    width: 150px;
+    height: 55px;
+    margin: 0 20px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.ex-choosen{
+    background-color: yellow;
+}
