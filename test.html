@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/test.css">
-  <title>Toggle Boxes</title>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
 </head>
+
+
+<!-- Default Settings Example -->
 <body>
+  
+  <script>
+      // Check for user preferences or use defaults
+      var userLanguage = getUserLanguage() || 'en';
+      document.documentElement.lang = userLanguage;
 
-  <button id="btnBox1" onclick="toggleBox('box1')">Mở Box 1</button>
-  <div id="box1" class="box">
-    <p>Nội dung Box 1</p>
-  </div>
+      function getUserLanguage() {
+          // Code to get user language preference (could be from cookies, user accounts, etc.)
+          return 'en'; // Default to English if not set
+      }
+      getUserLanguage();
+  </script>
 
-  <button id="btnBox2" onclick="toggleBox('box2')">Mở Box 2</button>
-  <div id="box2" class="box">
-    <p>Nội dung Box 2</p>
-  </div>
-
-  <script src="assets/js/test.js"></script>
+  <!-- Rest of your HTML content -->
 </body>
+
+
+
+
 </html>
